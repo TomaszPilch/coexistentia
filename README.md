@@ -100,7 +100,7 @@ Install or upgrade a release:
 
 ```sh
 helm upgrade --install coexistentia ./charts/coexistentia \
-  --namespace coexistentia \
+  --namespace coex \
   --create-namespace \
   --set image.tag=v1.0.0
 ```
@@ -111,7 +111,7 @@ configured in `charts/coexistentia/values.yaml` or in a separate values file:
 
 ```sh
 helm upgrade --install coexistentia ./charts/coexistentia \
-  --namespace coexistentia \
+  --namespace coex \
   --create-namespace \
   --values values.production.yaml
 ```

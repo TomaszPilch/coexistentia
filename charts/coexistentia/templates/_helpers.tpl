@@ -19,6 +19,10 @@
 {{- printf "%s-%s" .Chart.Name .Chart.Version | replace "+" "_" | trunc 63 | trimSuffix "-" }}
 {{- end }}
 
+{{- define "coexistentia.namespace" -}}
+{{- default .Release.Namespace .Values.namespaceOverride | trunc 63 | trimSuffix "-" }}
+{{- end }}
+
 {{- define "coexistentia.labels" -}}
 helm.sh/chart: {{ include "coexistentia.chart" . }}
 {{ include "coexistentia.selectorLabels" . }}

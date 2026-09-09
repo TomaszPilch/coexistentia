@@ -3,6 +3,7 @@ apiVersion: networking.k8s.io/v1
 kind: Ingress
 metadata:
   name: {{ include "coexistentia.fullname" . }}
+  namespace: {{ include "coexistentia.namespace" . }}
   labels:
     {{- include "coexistentia.labels" . | nindent 4 }}
   {{- with .Values.ingress.annotations }}

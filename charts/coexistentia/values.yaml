@@ -1,11 +1,14 @@
 replicaCount: 1
 
+namespaceOverride: coex
+
 image:
   repository: europe-central2-docker.pkg.dev/tomasz-codes/tomasz-codes/coexistentia
   pullPolicy: IfNotPresent
   tag: latest
 
-imagePullSecrets: []
+imagePullSecrets:
+  - name: gcr-json-key
 nameOverride: ""
 fullnameOverride: ""
 

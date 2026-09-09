@@ -3,6 +3,7 @@ apiVersion: autoscaling/v2
 kind: HorizontalPodAutoscaler
 metadata:
   name: {{ include "coexistentia.fullname" . }}
+  namespace: {{ include "coexistentia.namespace" . }}
   labels:
     {{- include "coexistentia.labels" . | nindent 4 }}
 spec:
