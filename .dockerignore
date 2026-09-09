@@ -1,0 +1,14 @@
+.git
+.github
+.idea
+.output
+.tanstack
+.vinxi
+.wrangler
+node_modules
+charts
+Dockerfile
+README.md
+*.log
+*.local
+.env*
