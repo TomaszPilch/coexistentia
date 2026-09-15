@@ -116,6 +116,39 @@ helm upgrade --install coexistentia ./charts/coexistentia \
   --values values.production.yaml
 ```
 
+### Ingress basic authentication
+
+The chart enables NGINX Ingress basic authentication when ingress is enabled. It
+expects an htpasswd Secret named `coexistentia-basic-auth` in the `coex`
+namespace. Create it without committing credentials:
+
+```sh
+htpasswd -c auth <username>
+kubectl create secret generic coexistentia-basic-auth \
+  --namespace coex \
+  --from-file=auth
+rm auth
+```
+
+Enable and configure the ingress in your production values:
+
+```yaml
+ingress:
+  enabled: true
+  className: nginx
+  basicAuth:
+    enabled: true
+    secretName: coexistentia-basic-auth
+    realm: Authentication Required
+  hosts:
+    - host: coexistentia.example.com
+      paths:
+        - path: /
+          pathType: Prefix
+```
+
+The referenced Secret must exist in the same `coex` namespace as the Ingress.
+
 Validate the chart locally:
 
 ```sh

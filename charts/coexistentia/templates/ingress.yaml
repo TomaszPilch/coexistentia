@@ -6,9 +6,16 @@ metadata:
   namespace: {{ include "coexistentia.namespace" . }}
   labels:
     {{- include "coexistentia.labels" . | nindent 4 }}
-  {{- with .Values.ingress.annotations }}
+  {{- if or .Values.ingress.basicAuth.enabled .Values.ingress.annotations }}
   annotations:
+    {{- if .Values.ingress.basicAuth.enabled }}
+    nginx.ingress.kubernetes.io/auth-type: basic
+    nginx.ingress.kubernetes.io/auth-secret: {{ required "ingress.basicAuth.secretName is required when basic authentication is enabled" .Values.ingress.basicAuth.secretName | quote }}
+    nginx.ingress.kubernetes.io/auth-realm: {{ .Values.ingress.basicAuth.realm | quote }}
+    {{- end }}
+    {{- with .Values.ingress.annotations }}
     {{- toYaml . | nindent 4 }}
+    {{- end }}
   {{- end }}
 spec:
   {{- with .Values.ingress.className }}

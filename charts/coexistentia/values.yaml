@@ -41,8 +41,12 @@ service:
 
 ingress:
   enabled: false
-  className: ""
+  className: nginx
   annotations: {}
+  basicAuth:
+    enabled: true
+    secretName: coexistentia-basic-auth
+    realm: Authentication Required
   hosts:
     - host: coexistentia.example.com
       paths:
