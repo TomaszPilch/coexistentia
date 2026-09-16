@@ -1,11 +1,16 @@
 import { createFileRoute } from "@tanstack/react-router";
 import { Building2, Facebook, GraduationCap, Instagram, Mail, MapPin, Users } from "lucide-react";
 
-import heroVideo from "../assets/coex.mp4";
+import heroBanner768Avif from "../assets/hero-banner-768.avif";
+import heroBanner768Webp from "../assets/hero-banner-768.webp";
+import heroBanner1536Avif from "../assets/hero-banner-1536.avif";
+import heroBanner1536Webp from "../assets/hero-banner-1536.webp";
+import heroBanner2560Avif from "../assets/hero-banner-2560.avif";
+import heroBanner2560Webp from "../assets/hero-banner-2560.webp";
 import heroBanner from "../assets/hero-banner.jpg";
 import groupPhoto from "../assets/coex.jpeg";
 import alicjaTrybus from "../assets/alicja-trybus.jpg";
-import barbaraFronkova from "../assets/barbara-fronkova.jpg";
+import barboraFronkova from "../assets/barbara-fronkova.jpg";
 import beataSikorova from "../assets/beata-sikorova.jpg";
 import danielLacek from "../assets/daniel-lacek.jpg";
 import ewaRylko from "../assets/ewa-rylko.jpg";
@@ -151,12 +156,12 @@ const members = [
       "Je mi 34 let a společně s manželkou a dvěma dětmi žijeme v Hrádku. Pracuji v oboru IT jako programátor a spolupracuji s klienty po celém světě. Rád zdokonaluji své dovednosti, trávím čas se svými dětmi a také se angažuji v PZKO, kde jsem již více než deset let místopředsedou. Bez místních podnikatelů se obec nemůže rozvíjet.",
   },
   {
-    image: barbaraFronkova,
-    name: "Bc. Barbara Fronková",
+    image: barboraFronkova,
+    name: "Bc. Barbora Fronková",
     descPl:
-      "Mam 32 lata. Od kilku lat pracuję w trzynieckim szpitalu jako asystentka farmaceutyczna. Jestem mamą trójki dzieci i to właśnie rodzina jest dla mnie najważniejsza. Wspólnie spędzamy czas, chodzimy w góry, jeździmy na rowerach i troszczymy się o zwierzęta. Jestem również członkinią miejscowej ochotniczej straży pożarnej. W parafii ewangelickiej angażuję się w pracę z dziećmi i pomagam w szkółce niedzielnej. Lubię być blisko ludzi i angażować się w sprawy naszej społeczności. Chcę gminy bez hałasu, marzą mi się bardziej efektywne barierki przeciwhałasowe.",
+      "Mam 34 lata. Od kilku lat pracuję w trzynieckim szpitalu jako asystentka farmaceutyczna. Jestem mamą trójki dzieci i to właśnie rodzina jest dla mnie najważniejsza. Wspólnie spędzamy czas, chodzimy w góry, jeździmy na rowerach i troszczymy się o zwierzęta. Jestem również członkinią miejscowej ochotniczej straży pożarnej. W parafii ewangelickiej angażuję się w pracę z dziećmi i pomagam w szkółce niedzielnej. Lubię być blisko ludzi i angażować się w sprawy naszej społeczności. Chcę gminy bez hałasu, marzą mi się bardziej efektywne barierki przeciwhałasowe.",
     descCz:
-      "Je mi 32 let. Již několik let pracuji v třinecké nemocnici jako farmaceutická asistentka. Jsem maminkou tří dětí a nejraději trávím volný čas s rodinou. Chodíme na hory, jezdíme na kole a staráme se o zvířata. Jsem členkou místního sboru dobrovolných hasičů. V evangelickém sboru se věnuji práci s dětmi a pomáhám v nedělní škole. Ráda jsem mezi lidmi a aktivně se zapojuji do života naší obce. Chci obec s menším hlukem a lepší protihlukovou ochranou.",
+      "Je mi 34 let. Již několik let pracuji v třinecké nemocnici jako farmaceutická asistentka. Jsem maminkou tří dětí a nejraději trávím volný čas s rodinou. Chodíme na hory, jezdíme na kole a staráme se o zvířata. Jsem členkou místního sboru dobrovolných hasičů. V evangelickém sboru se věnuji práci s dětmi a pomáhám v nedělní škole. Ráda jsem mezi lidmi a aktivně se zapojuji do života naší obce. Chci obec s menším hlukem a lepší protihlukovou ochranou.",
   },
   {
     image: marianSztefek,
@@ -241,24 +246,32 @@ function Index() {
       </header>
 
       {/* Hero — full-bleed banner */}
-      <section id="top" className="relative min-h-[30vh] overflow-hidden md:min-h-[60vh]">
-        <video
-          autoPlay
-          loop
-          muted
-          playsInline
-          preload="metadata"
-          poster={heroBanner}
-          aria-hidden="true"
-          disablePictureInPicture
-          className="absolute inset-0 h-full w-full object-cover motion-reduce:hidden"
-        >
-          <source src={heroVideo} type="video/mp4" />
-        </video>
+      <section id="top" className="relative min-h-[78vh] overflow-hidden md:min-h-[85vh]">
+        <picture>
+          <source
+            type="image/avif"
+            srcSet={`${heroBanner768Avif} 768w, ${heroBanner1536Avif} 1536w, ${heroBanner2560Avif} 2560w`}
+            sizes="100vw"
+          />
+          <source
+            type="image/webp"
+            srcSet={`${heroBanner768Webp} 768w, ${heroBanner1536Webp} 1536w, ${heroBanner2560Webp} 2560w`}
+            sizes="100vw"
+          />
+          <img
+            src={heroBanner}
+            alt="Społeczność wioski Hrádek — ilustracja"
+            className="absolute inset-0 h-full w-full object-cover"
+            width={2560}
+            height={1707}
+            decoding="async"
+            fetchPriority="high"
+          />
+        </picture>
         <div className="absolute inset-0 bg-gradient-to-r from-navy/90 via-navy/75 to-navy/45" />
         <div className="absolute inset-0 bg-gradient-to-t from-navy/80 via-transparent to-navy/30" />
 
-        <div className="relative z-10 mx-auto flex min-h-[30vh] max-w-6xl flex-col justify-center px-5 py-24 md:min-h-[60vh] md:py-32">
+        <div className="relative z-10 mx-auto flex min-h-[78vh] max-w-6xl flex-col justify-center px-5 py-24 md:min-h-[85vh] md:py-32">
           <p className="eyebrow text-gold">Zespół kandydatów · Tým kandidátů</p>
           <h1 className="mt-6 max-w-3xl font-display text-5xl font-bold leading-[0.95] tracking-tight text-primary-foreground sm:text-6xl lg:text-7xl">
             Wspólnie
