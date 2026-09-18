@@ -137,7 +137,7 @@ const members = [
     descPl:
       "Mam 38 lat. Wraz z mężem i dwójką dzieci mieszkam w Gródku od 12 lat. Ukończyłam socjologię na Uniwersytecie Jagiellońskim w Krakowie. Pracowałam w mediach, a obecnie pracuję w szkolnictwie. Moją pasją są ruch i ludzie. Cieszy mnie praca społeczna oraz organizowanie najróżniejszych wydarzeń. Od 2023 roku jestem prezeską MK PZKO w Gródku. Dla mnie ważne jest współdziałanie, bez różnicy narodowości czy wyznania.",
     descCz:
-      "Je mi 38 let. Spolu s manželem a dvěma dětmi žiji v Hrádku již 12 let. Vystudovala jsem sociologii na Jagellonské univerzitě v Krakově. Pracovala jsem v médiích a v současné době působím ve školství. Mými vášněmi jsou pohyb a lidé. Baví mě společenská práce a organizování nejrůznějších akcí. Od roku 2023 jsem předsedkyní MK PZKO v Hrádku. Je pro mě důležité spolupracovat a spojovat lidi bez ohledu na národnost nebo vyznání.",
+      "Je mi 38 let. Spolu s manželem a dvěma dětmi žiji v Hrádku již 12 let. Vystudovala jsem sociologii na Jagellonské univerzitě v Krakově. Pracovala jsem v médiích a v současné době působím ve školství. Mými vášněmi jsou pohyb a lidé. Baví mě společensky prospěšná práce a organizování nejrůznějších akcí. Od roku 2023 jsem předsedkyní MK PZKO v Hrádku. Je pro mě důležité spolupracovat a spojovat lidi bez ohledu na národnost nebo vyznání.",
   },
   {
     image: janJursa,
@@ -156,6 +156,14 @@ const members = [
       "Je mi 34 let a společně s manželkou a dvěma dětmi žijeme v Hrádku. Pracuji v oboru IT jako programátor a spolupracuji s klienty po celém světě. Rád zdokonaluji své dovednosti, trávím čas se svými dětmi a také se angažuji v PZKO, kde jsem již více než deset let místopředsedou. Bez místních podnikatelů se obec nemůže rozvíjet.",
   },
   {
+    image: marianSztefek,
+    name: "Marian Sztefek",
+    descPl:
+      "Mam 45 lat, w Gródku mieszkam przez całe swoje życie. Jestem ojcem dwu dziewczynek, uwielbiam wycieczki w góry z rodziną i kolegami, jazdę na rowerze i pracę w ogrodzie. Chcę, aby nasza gmina była zimą dobrze i na czas odśnieżana.",
+    descCz:
+      "Je mi 45 let, v Hrádku žiji celý svůj život. Jsem otcem dvou holčiček. Mám rád výlety do hor s rodinou a kamarády, jízdu na kole a práci na zahradě. Chci, aby naše obec byla i v zimě dobře a včas udržovaná.",
+  },
+  {
     image: barboraFronkova,
     name: "Bc. Barbora Fronková",
     descPl:
@@ -164,12 +172,12 @@ const members = [
       "Je mi 34 let. Již několik let pracuji v třinecké nemocnici jako farmaceutická asistentka. Jsem maminkou tří dětí a nejraději trávím volný čas s rodinou. Chodíme na hory, jezdíme na kole a staráme se o zvířata. Jsem členkou místního sboru dobrovolných hasičů. V evangelickém sboru se věnuji práci s dětmi a pomáhám v nedělní škole. Ráda jsem mezi lidmi a aktivně se zapojuji do života naší obce. Chci obec s menším hlukem a lepší protihlukovou ochranou.",
   },
   {
-    image: marianSztefek,
-    name: "Marian Sztefek",
+    image: irenaMedkova,
+    name: "Irena Medková",
     descPl:
-      "Mam 45 lat, w Gródku mieszkam przez całe swoje życie. Jestem ojcem dwu dziewczynek, uwielbiam wycieczki w góry z rodziną i kolegami, jazdę na rowerze i pracę w ogrodzie. Chcę, aby nasza gmina była zimą dobrze i na czas odśnieżana.",
+      "Od ponad 20 lat prowadzę w Gródku sklep wielobranżowy. Lubię podróżować, ale najbardziej cieszy mnie czas spędzany z wnukami. Chcę zatroszczyć się o naszych seniorów w gminie.",
     descCz:
-      "Je mi 45 let, v Hrádku žiji celý svůj život. Jsem otcem dvou holčiček. Mám rád výlety do hor s rodinou a kamarády, jízdu na kole a práci na zahradě. Chci, aby naše obec byla i v zimě dobře a včas udržovaná.",
+      "Již více než 20 let provozuji v Hrádku obchod se smíšeným zbožím. Ráda cestuji, ale nejvíce mě těší čas strávený s vnoučaty. Chci, aby se naši senioři v obci cítili dobře a měli potřebnou péči.",
   },
   {
     image: alicjaTrybus,
@@ -188,14 +196,6 @@ const members = [
       "Jsem mámou tří dcer, učitelkou jógy a kaligrafie. Fascinuje mě historie, staré písmo a literatura. Velmi si cením kontaktu s lidmi a ráda se zapojuji do dění kolem sebe. Chci obec, která pečuje o své tradice a jazyk.",
   },
   {
-    image: beataSikorova,
-    name: "MUDr. Beata Sikorová",
-    descPl:
-      "Mam 42 lata i jestem mamą dwójki dzieci. Pracuję jako zastępca ordynatora na oddziale dziecięcym w szpitalu w Trzyńcu. W wolnym czasie najchętniej wybieram się w góry, jeżdżę na rowerze oraz oglądam mecze piłkarskie i hokejowe. Dialog i troska o ludzi w potrzebie – bez tego ani rusz.",
-    descCz:
-      "Je mi 42 let a jsem mámou dvou dětí. Pracuji jako zástupkyně primáře na dětském oddělení v nemocnici v Třinci. Ve volném čase nejraději vyrážím do hor, jezdím na kole a sleduji fotbalové a hokejové zápasy. Naslouchat lidem a pomáhat tam, kde je potřeba – to je pro mě důležité.",
-  },
-  {
     image: zbigniewGrochol,
     name: "Zbigniew Grochol",
     descPl:
@@ -204,12 +204,12 @@ const members = [
       "Je mi 56 let, jsem vyučený elektrikář. Nejraději trávím čas na zahradě, jsem kutil a rád pracuji se dřevem. Čelit problémům – toho se držím.",
   },
   {
-    image: irenaMedkova,
-    name: "Irena Medková",
+    image: beataSikorova,
+    name: "MUDr. Beata Sikorová",
     descPl:
-      "Od ponad 20 lat prowadzę w Gródku sklep wielobranżowy. Lubię podróżować, ale najbardziej cieszy mnie czas spędzany z wnukami. Chcę zatroszczyć się o naszych seniorów w gminie.",
+      "Mam 42 lata i jestem mamą dwójki dzieci. Pracuję jako zastępca ordynatora na oddziale dziecięcym w szpitalu w Trzyńcu. W wolnym czasie najchętniej wybieram się w góry, jeżdżę na rowerze oraz oglądam mecze piłkarskie i hokejowe. Dialog i troska o ludzi w potrzebie – bez tego ani rusz.",
     descCz:
-      "Již více než 20 let provozuji v Hrádku obchod se smíšeným zbožím. Ráda cestuji, ale nejvíce mě těší čas strávený s vnoučaty. Chci, aby se naši senioři v obci cítili dobře a měli potřebnou péči.",
+      "Je mi 42 let a jsem mámou dvou dětí. Pracuji jako zástupkyně primáře na dětském oddělení v nemocnici v Třinci. Ve volném čase nejraději vyrážím do hor, jezdím na kole a sleduji fotbalové a hokejové zápasy. Naslouchat lidem a pomáhat tam, kde je potřeba – to je pro mě důležité.",
   },
 ];
 
