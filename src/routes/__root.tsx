@@ -9,7 +9,6 @@ import {
 } from "@tanstack/react-router";
 import type { ReactNode } from "react";
 
-import GoogleAnalytics from "../layout";
 import appCss from "../styles.css?url";
 
 function NotFoundComponent() {
@@ -115,10 +114,20 @@ function RootShell({ children }: { children: ReactNode }) {
     <html lang="pl">
       <head>
         <HeadContent />
+        <script async src="https://www.googletagmanager.com/gtag/js?id=G-10D5NJCXLG" />
+        <script
+          dangerouslySetInnerHTML={{
+            __html: `
+              window.dataLayer = window.dataLayer || [];
+              function gtag(){dataLayer.push(arguments);}
+              gtag('js', new Date());
+              gtag('config', 'G-10D5NJCXLG');
+            `,
+          }}
+        />
       </head>
       <body>
         {children}
-        <GoogleAnalytics />
         <Scripts />
       </body>
     </html>
