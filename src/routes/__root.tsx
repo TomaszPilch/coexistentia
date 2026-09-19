@@ -9,6 +9,7 @@ import {
 } from "@tanstack/react-router";
 import type { ReactNode } from "react";
 
+import GoogleAnalytics from "../layout";
 import appCss from "../styles.css?url";
 
 function NotFoundComponent() {
@@ -117,6 +118,7 @@ function RootShell({ children }: { children: ReactNode }) {
       </head>
       <body>
         {children}
+        <GoogleAnalytics />
         <Scripts />
       </body>
     </html>
